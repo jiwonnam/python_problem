@@ -1,5 +1,5 @@
 
-'''def minimumSwaps(arr, n):
+'''def selectionSort(arr, n):
     count = 0
     for i in range(n):
         min_index = i
