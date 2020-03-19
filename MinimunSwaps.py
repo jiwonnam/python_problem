@@ -16,7 +16,6 @@
 def minimumSwaps(arr):
     sort = []
     count = 0
-    time = 0
     for i in range(len(arr)):
         if i+1 == arr[i]:
             continue
