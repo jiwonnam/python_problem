@@ -1,3 +1,6 @@
+"""Whenever swaping two elements, at least one element can find the appropriate position
+so time complexity is c*(the number of elements in wrong position)
+the worst case is when all elements are in wrong position and time complexity is 'n'"""
 
 '''def selectionSort(arr, n):
     count = 0
@@ -16,23 +19,21 @@
 def minimumSwaps(arr):
     sort = []
     count = 0
-    for i in range(len(arr)):
+    for i in range(len(arr)): # time complexity is n
         if i+1 == arr[i]:
             continue
         else:
-            sort.append(i)
+            sort.append(i) # add index of elements that are in wrong position
 
-    for j in sort:
+    for j in sort: # check the element from first to end in 'sort' array and fix it consecutively
         if j+1 == arr[j]:
             continue
         else:
             while 1:
-                # print arr[j], arr[arr[j]-1]
-                temp = arr[arr[j]-1]
+                temp = arr[arr[j]-1] # swap two elements to put in correct position
                 arr[arr[j]-1] = arr[j]
                 arr[j] = temp
                 count += 1
-                # print arr, count
                 if arr[j] == j+1:
                     break
     return count
