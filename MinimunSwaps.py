@@ -19,7 +19,7 @@ the worst case is when all elements are in wrong position and time complexity is
 def minimumSwaps(arr):
     sort = []
     count = 0
-    for i in range(len(arr)): # time complexity is n
+    for i in range(len(arr)):
         if i+1 == arr[i]:
             continue
         else:
